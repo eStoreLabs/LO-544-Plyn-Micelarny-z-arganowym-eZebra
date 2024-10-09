@@ -1,47 +1,75 @@
-@font-face {
-  font-family: "Locator";
-  src: local("Locator"), url("../fonts/Locator.otf") format("truetype");
-}
-@font-face {
-  font-family: "Locator-medium";
-  src: local("Locator-medium"), url("../fonts/Locator-medium.otf") format("truetype");
-}
-html,
-body {
-  margin: 0;
+#es-rc #es-rc-content {
+  margin: 0 auto;
   padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-#es-garnier.es-garnier {
+  overflow: hidden;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 16px;
   line-height: 1.2;
-  max-width: 998px;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
+  max-width: 990px;
   color: #000;
   background: #fff;
 }
-#es-garnier.es-garnier * {
+#es-rc #es-rc-content * {
   box-sizing: border-box;
 }
-#es-garnier.es-garnier h2,
-#es-garnier.es-garnier h3,
-#es-garnier.es-garnier h4,
-#es-garnier.es-garnier h5 {
-  font-family: "Montserrat", sans-serif;
-  color: #000;
+#es-rc #es-rc-content p {
+  margin: 0;
 }
-#es-garnier.es-garnier .es-formula {
+#es-rc #es-rc-content img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+#es-rc #es-rc-content .es-features {
+  margin: 20px auto;
+}
+#es-rc #es-rc-content .es-features__wrapperBtm {
+  margin-top: 30px;
+  padding-inline: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#es-rc #es-rc-content .es-features__single {
+  width: 100%;
+  padding: 10px;
+}
+#es-rc #es-rc-content .es-features__img {
+  overflow: hidden;
+  border-radius: 36px;
+}
+#es-rc #es-rc-content .es-features__img img {
+  transition: all 300ms ease-in-out;
+}
+#es-rc #es-rc-content .es-features__img img:hover {
+  scale: 1.05;
+}
+#es-rc #es-rc-content .es-features__textWrapper {
+  height: 80px;
+  padding: 8px;
+  background-color: #C86C96;
+  border-radius: 14px;
+  margin-top: 14px;
+  display: grid;
+  place-items: center;
+}
+#es-rc #es-rc-content .es-features__text {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: #FFF;
+  text-align: center;
+  text-wrap: balance;
+  font-weight: 500;
+}
+#es-rc #es-rc-content .es-formula {
   margin: 20px auto 60px;
 }
-#es-garnier.es-garnier .es-formula__title {
+#es-rc #es-rc-content .es-formula__title {
   margin: 0;
   padding: 0;
   line-height: inherit;
@@ -53,30 +81,27 @@ body {
   font-size: 35px;
   font-weight: 700;
   font-style: italic;
-  color: #f08ab5;
+  color: #F1A9CA;
   text-align: center;
   width: 80%;
   text-transform: uppercase;
 }
-#es-garnier.es-garnier .es-formula__title span {
+#es-rc #es-rc-content .es-formula__title span {
   font-size: 20px;
 }
-#es-garnier.es-garnier .es-formula__wrapper {
+#es-rc #es-rc-content .es-formula__wrapper {
   padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-#es-garnier.es-garnier .es-formula__left {
+#es-rc #es-rc-content .es-formula__left {
   max-width: 498px;
 }
-#es-garnier.es-garnier .es-formula__left img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
+#es-rc #es-rc-content .es-formula__left img {
   padding: 20px;
 }
-#es-garnier.es-garnier .es-formula__right {
+#es-rc #es-rc-content .es-formula__right {
   max-width: 498px;
   background: url("../images/formula-right.png") no-repeat;
   background-size: auto;
@@ -87,69 +112,31 @@ body {
   align-items: center;
   gap: 20px 20px;
 }
-#es-garnier.es-garnier .es-formula__single {
-  width: 230px;
-  height: 230px;
+#es-rc #es-rc-content .es-formula__single {
+  width: 250px;
+  height: 250px;
   padding: 30px 10px;
   text-align: center;
+  text-wrap: balance;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px rgb(121, 115, 115);
+  box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.1);
+  transition: all 300ms ease-in-out;
 }
-#es-garnier.es-garnier .es-use {
-  margin: 20px auto;
+#es-rc #es-rc-content .es-formula__single:hover {
+  box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.2);
 }
-#es-garnier.es-garnier .es-use__titleWraper {
-  margin: 0 auto 20px;
-  width: 60%;
-  height: 100%;
-  padding: 0 25px;
-  line-height: 25px;
-  text-align: center;
-  background: #f08ab5;
-  transform: skewX(-45deg);
+#es-rc #es-rc-content .es-formula__single img {
+  max-width: 60px;
 }
-#es-garnier.es-garnier .es-use__title {
-  display: inline-block;
-  transform: skewX(45deg);
-  width: 100%;
-  margin: auto;
-  padding: 10px 0;
-  font-size: 18px;
+#es-rc #es-rc-content .es-formula__text--title {
   font-weight: 700;
-  font-style: italic;
-  color: #fff;
-  text-align: center;
+  margin-block: 5px;
 }
-#es-garnier.es-garnier .es-use__wrapper {
-  padding-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px 20px;
-}
-#es-garnier.es-garnier .es-use__single {
-  padding: 0 10px;
-  max-width: 300px;
-}
-#es-garnier.es-garnier .es-use__single img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-#es-garnier.es-garnier .es-use__text {
-  margin: 0;
-  padding: 0;
-  line-height: inherit;
-  color: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  padding: 20px 0;
-}
-#es-garnier.es-garnier .es-cross {
+#es-rc #es-rc-content .es-cross {
   margin: 20px auto;
 }
-#es-garnier.es-garnier .es-cross__titleWraper {
+#es-rc #es-rc-content .es-cross__titleWraper {
   margin: 0 auto 20px;
   width: -moz-fit-content;
   width: fit-content;
@@ -157,10 +144,10 @@ body {
   padding: 0 25px;
   line-height: 25px;
   text-align: center;
-  background: #f08ab5;
+  background: #F1A9CA;
   transform: skewX(-45deg);
 }
-#es-garnier.es-garnier .es-cross__title {
+#es-rc #es-rc-content .es-cross__title {
   display: inline-block;
   transform: skewX(45deg);
   width: 100%;
@@ -173,7 +160,7 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-#es-garnier.es-garnier .es-cross__products {
+#es-rc #es-rc-content .es-cross__products {
   padding-top: 30px;
   margin: 0 auto;
   display: flex;
@@ -181,7 +168,7 @@ body {
   gap: 20px 2px;
   justify-content: space-between;
 }
-#es-garnier.es-garnier .es-cross__product {
+#es-rc #es-rc-content .es-cross__product {
   width: 162px;
   margin: 0 auto;
   margin-bottom: 32px;
@@ -189,17 +176,17 @@ body {
   flex-flow: column;
   align-items: center;
 }
-#es-garnier.es-garnier .es-cross__product:hover .es-cross__link::before {
+#es-rc #es-rc-content .es-cross__product:hover .es-cross__link::before {
   transform: scaleX(1);
 }
-#es-garnier.es-garnier .es-cross__product:hover .es-cross__packshot {
+#es-rc #es-rc-content .es-cross__product:hover .es-cross__packshot {
   transform: translateY(-8px);
 }
-#es-garnier.es-garnier .es-cross__packshot {
+#es-rc #es-rc-content .es-cross__packshot {
   transition: transform 0.6s;
   margin-bottom: 24px;
 }
-#es-garnier.es-garnier .es-cross__text {
+#es-rc #es-rc-content .es-cross__text {
   margin: 0;
   padding: 0;
   line-height: inherit;
@@ -211,7 +198,7 @@ body {
   margin-bottom: 24px;
   text-align: center;
 }
-#es-garnier.es-garnier .es-cross__desc {
+#es-rc #es-rc-content .es-cross__desc {
   margin: 0;
   padding: 0;
   line-height: inherit;
@@ -221,7 +208,7 @@ body {
   margin-bottom: 8px;
   font-size: 16px;
 }
-#es-garnier.es-garnier .es-cross__link {
+#es-rc #es-rc-content .es-cross__link {
   margin: 0;
   padding: 0;
   line-height: inherit;
@@ -238,11 +225,11 @@ body {
   font-weight: 500;
   text-align: center;
   transition: all 0.3s ease-in-out;
-  background: #f08ab5;
+  background: #F1A9CA;
   transition: color 0.3s ease-in-out;
   z-index: 1;
 }
-#es-garnier.es-garnier .es-cross__link::before {
+#es-rc #es-rc-content .es-cross__link::before {
   content: "";
   position: absolute;
   border-radius: 4px;
@@ -251,38 +238,53 @@ body {
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-color: #980c75;
+  background-color: #C86C96;
   transition: transform 0.3s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
 }
-#es-garnier.es-garnier .es-cross__img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
+#es-rc #es-rc-content .es-cross__img {
   transition: all 0.3s ease-in-out;
 }
-#es-garnier.es-garnier .es-footer {
+#es-rc #es-rc-content .es-footer {
   margin: 0 auto;
   text-align: center;
   font-size: 10px;
 }
-#es-garnier.es-garnier .es-footer__bg {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
+#es-rc #es-rc-content .es-footer__bg {
   padding-top: 20px;
 }
-#es-garnier.es-garnier .es-footer__logo {
+#es-rc #es-rc-content .es-footer__logo {
   padding-top: 40px;
   width: 200px;
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
 }
-@media screen and (min-width: 998px) {
-  #es-garnier.es-garnier .es-cross__product {
+@media screen and (min-width: 576px) {
+  #es-rc #es-rc-content .es-features__single {
+    width: 30%;
+    font-size: 14px;
+  }
+  #es-rc #es-rc-content .es-cross__product {
     justify-content: flex-end;
+  }
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-features__wrapperBtm {
+    padding-inline: 24px;
+  }
+  #es-rc #es-rc-content .es-formula__left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  #es-rc #es-rc-content .es-formula__right {
+    width: 50%;
+  }
+  #es-rc #es-rc-content .es-formula__single {
+    width: 45%;
+    font-size: 14px;
+  }
+  #es-rc #es-rc-content .es-formula__text--title {
+    margin-block: 10px;
   }
 }
 

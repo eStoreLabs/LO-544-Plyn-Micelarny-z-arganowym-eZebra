@@ -1,34 +1,7 @@
-@charset "UTF-8";
-
-@font-face {
-  font-family: 'Locator';
-  src: local('Locator'), url('../fonts/Locator.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Locator-medium';
-  src: local('Locator-medium'),
-    url('../fonts/Locator-medium.otf') format('truetype');
-}
-
 $regular: 'Montserrat', sans-serif;
-$pink: #f08ab5;
-$yellow: #f7dd52;
-$pink-light: #f2e4e5;
-$pink-dark: #980c75;
-$button: #f5835a;
-$primary: #f47242;
-$secondary: #f75172;
+$pink: #F1A9CA;
+$pink-dark: #C86C96;
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
 
 @mixin text {
   margin: 0;
@@ -39,38 +12,82 @@ body {
   font-weight: inherit;
 }
 
-@mixin img {
-  max-width: 100%;
-  display: block;
+#es-rc #es-rc-content {
   margin: 0 auto;
-}
-
-#es-garnier.es-garnier {
+  padding: 0;
+  overflow: hidden;
   font-family: $regular;
   font-weight: 200;
   font-size: 16px;
   line-height: 1.2;
-  max-width: 998px;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
+  max-width: 990px;
   color: #000;
   background: #fff;
 
   * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: $regular;
-    color: #000;
+  p {
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
   }
 
 
+  .es-features {
+    margin: 20px auto;
 
+
+    &__wrapperBtm {
+      margin-top: 30px;
+      padding-inline: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__single {
+      width: 100%;
+      padding: 10px;
+    }
+
+    &__img {
+      overflow: hidden;
+      border-radius: 36px;
+    }
+
+    &__img img {
+      transition: all 300ms ease-in-out;
+    }
+
+    &__img img:hover {
+      scale: 1.05;
+    }
+
+    &__textWrapper {
+      height: 80px;
+      padding: 8px;
+      background-color: $pink-dark;
+      border-radius: 14px;
+      margin-top: 14px;
+      display: grid;
+      place-items: center;
+    }
+
+    &__text {
+      @include text;
+      color: #FFF;
+      text-align: center;
+      text-wrap: balance;
+      font-weight: 500;
+    }
+  }
 
   .es-formula {
     margin: 20px auto 60px;
@@ -103,7 +120,6 @@ body {
       max-width: 498px;
 
       & img {
-        @include img;
         padding: 20px;
       }
     }
@@ -121,65 +137,32 @@ body {
     }
 
     &__single {
-      width: 230px;
-      height: 230px;
+      width: 250px;
+      height: 250px;
       padding: 30px 10px;
       text-align: center;
+      text-wrap: balance;
       background-color: #fff;
       border-radius: 20px;
-      box-shadow: 0px 0px 10px 0px rgba(121, 115, 115, 1);
-    }
-  }
-
-  .es-use {
-    margin: 20px auto;
-
-    &__titleWraper {
-      margin: 0 auto 20px;
-      width: 60%;
-      height: 100%;
-      padding: 0 25px;
-      line-height: 25px;
-      text-align: center;
-      background: $pink;
-      transform: skewX(-45deg);
+      box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.1);
+      transition: all 300ms ease-in-out;
     }
 
-    &__title {
-      display: inline-block;
-      transform: skewX(45deg);
-      width: 100%;
-      margin: auto;
-      padding: 10px 0;
-      font-size: 18px;
+    &__single:hover {
+      box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.2);
+    }
+
+    &__single img {
+      max-width: 60px;
+    }
+
+    &__text--title {
       font-weight: 700;
-      font-style: italic;
-      color: #fff;
-      text-align: center;
-    }
-
-    &__wrapper {
-      padding-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px 20px;
-    }
-
-    &__single {
-      padding: 0 10px;
-      max-width: 300px;
-
-      & img {
-        @include img;
-      }
-    }
-
-    &__text {
-      @include text;
-      padding: 20px 0;
+      margin-block: 5px;
     }
   }
+
+
 
 
   .es-cross {
@@ -288,7 +271,6 @@ body {
     }
 
     &__img {
-      @include img;
       transition: all 0.3s ease-in-out;
     }
   }
@@ -299,23 +281,58 @@ body {
     font-size: 10px;
 
     &__bg {
-      @include img;
       padding-top: 20px;
     }
 
     &__logo {
       padding-top: 40px;
       width: 200px;
-      @include img;
     }
   }
 
-  @media screen and (min-width: 998px) {
+  @media screen and (min-width: 576px) {
+    .es-features {
+
+      &__single {
+        width: 30%;
+        font-size: 14px;
+      }
+
+    }
 
 
     .es-cross {
       &__product {
         justify-content: flex-end;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .es-features {
+      &__wrapperBtm {
+        padding-inline: 24px;
+      }
+    }
+
+    .es-formula {
+      &__left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+      }
+
+      &__right {
+        width: 50%;
+      }
+
+      &__single {
+        width: 45%;
+        font-size: 14px;
+      }
+
+      &__text--title {
+        margin-block: 10px;
       }
     }
   }
