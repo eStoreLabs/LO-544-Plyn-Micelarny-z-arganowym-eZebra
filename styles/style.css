@@ -21,8 +21,57 @@
   display: block;
   margin: 0 auto;
 }
+#es-rc #es-rc-content .es-banner {
+  background-color: #DB7BA7;
+  color: #FFF;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 8px;
+}
 #es-rc #es-rc-content .es-features {
   margin: 20px auto;
+}
+#es-rc #es-rc-content .es-features__wrapperTop {
+  padding-inline: 16px;
+}
+#es-rc #es-rc-content .es-features__imgL {
+  padding: 10px;
+}
+#es-rc #es-rc-content .es-features__action {
+  padding: 10px;
+}
+#es-rc #es-rc-content .es-features__action--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  gap: 32px;
+}
+#es-rc #es-rc-content .es-features__action--title {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}
+#es-rc #es-rc-content .es-features__action--text {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: right;
+  font-size: 14px;
+  height: 150px;
+}
+#es-rc #es-rc-content .es-features__action--gradientBar {
+  width: 25px;
+  height: 150px;
+  background: rgb(201, 62, 126);
+  background: linear-gradient(180deg, rgb(201, 62, 126) 0%, rgb(241, 169, 202) 44%, rgb(255, 234, 243) 100%);
+  box-shadow: 7px 0px 6px 0px rgba(0, 0, 1, 0.4);
+  border-radius: 99px;
 }
 #es-rc #es-rc-content .es-features__wrapperBtm {
   margin-top: 30px;
@@ -65,6 +114,24 @@
   text-align: center;
   text-wrap: balance;
   font-weight: 500;
+}
+#es-rc #es-rc-content .es-technology {
+  text-align: center;
+  text-wrap: balance;
+  background-color: #F1A9CA;
+  color: #FFF;
+}
+#es-rc #es-rc-content .es-technology__textWrapper {
+  padding: 16px;
+}
+#es-rc #es-rc-content .es-technology__title {
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+#es-rc #es-rc-content .es-technology__text--bold {
+  font-weight: 700;
 }
 #es-rc #es-rc-content .es-formula {
   margin: 20px auto 60px;
@@ -259,15 +326,51 @@
   width: 200px;
 }
 @media screen and (min-width: 576px) {
+  #es-rc #es-rc-content .es-features__wrapperTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #es-rc #es-rc-content .es-features__imgL {
+    width: 50%;
+  }
+  #es-rc #es-rc-content .es-features__action--title {
+    font-size: 24px;
+    text-align: right;
+    margin-right: 24px;
+  }
   #es-rc #es-rc-content .es-features__single {
     width: 30%;
     font-size: 14px;
+  }
+  #es-rc #es-rc-content .es-technology {
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-technology__textWrapper {
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50%;
+    left: 2%;
+    width: 75%;
+    max-width: 444px;
   }
   #es-rc #es-rc-content .es-cross__product {
     justify-content: flex-end;
   }
 }
 @media (min-width: 768px) {
+  #es-rc #es-rc-content .es-features__wrapperTop {
+    padding-inline: 24px;
+  }
+  #es-rc #es-rc-content .es-features__action {
+    margin-right: 32px;
+  }
+  #es-rc #es-rc-content .es-features__action--text {
+    height: 200px;
+  }
+  #es-rc #es-rc-content .es-features__action--gradientBar {
+    height: 200px;
+  }
   #es-rc #es-rc-content .es-features__wrapperBtm {
     padding-inline: 24px;
   }
@@ -285,6 +388,18 @@
   }
   #es-rc #es-rc-content .es-formula__text--title {
     margin-block: 10px;
+  }
+}
+@media (min-width: 992px) {
+  #es-rc #es-rc-content .es-features__action {
+    margin-right: 64px;
+  }
+  #es-rc #es-rc-content .es-features__action--title {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  #es-rc #es-rc-content .es-features__action--text {
+    font-size: 18px;
   }
 }
 
