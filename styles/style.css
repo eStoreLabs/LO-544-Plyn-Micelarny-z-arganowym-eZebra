@@ -21,6 +21,12 @@
   display: block;
   margin: 0 auto;
 }
+#es-rc #es-rc-content .es-section-title {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
 #es-rc #es-rc-content .es-kv__logo--mobile {
   max-width: 300px;
   margin: auto;
@@ -71,10 +77,6 @@
 #es-rc #es-rc-content .es-banner {
   background-color: #DB7BA7;
   color: #FFF;
-  font-size: 32px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
   padding: 16px 8px;
 }
 #es-rc #es-rc-content .es-features {
@@ -250,30 +252,6 @@
 #es-rc #es-rc-content .es-cross {
   margin: 20px auto;
 }
-#es-rc #es-rc-content .es-cross__titleWraper {
-  margin: 0 auto 20px;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 100%;
-  padding: 0 25px;
-  line-height: 25px;
-  text-align: center;
-  background: #F1A9CA;
-  transform: skewX(-45deg);
-}
-#es-rc #es-rc-content .es-cross__title {
-  display: inline-block;
-  transform: skewX(45deg);
-  width: 100%;
-  margin: auto;
-  padding: 10px 0;
-  font-size: 18px;
-  font-weight: 700;
-  font-style: italic;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
 #es-rc #es-rc-content .es-cross__products {
   padding-top: 30px;
   margin: 0 auto;
@@ -308,9 +286,10 @@
   font-family: inherit;
   font-weight: inherit;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 24px;
   text-align: center;
+  height: 50px;
 }
 #es-rc #es-rc-content .es-cross__desc {
   margin: 0;
@@ -334,7 +313,7 @@
   padding: 8px 22px;
   text-decoration: none;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 15px;
   font-weight: 500;
   text-align: center;
@@ -346,13 +325,13 @@
 #es-rc #es-rc-content .es-cross__link::before {
   content: "";
   position: absolute;
-  border-radius: 4px;
+  border-radius: 10px;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-color: #C86C96;
+  background-color: #DB7BA7;
   transition: transform 0.3s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -499,36 +478,5 @@
   }
   #es-rc #es-rc-content .es-features__action--text {
     font-size: 18px;
-  }
-}
-
-@keyframes slideright {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes slideleft {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes slidedown {
-  from {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

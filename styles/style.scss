@@ -40,6 +40,13 @@ $pink-dark: #C86C96;
     margin: 0 auto;
   }
 
+  .es-section-title {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+
   .es-kv {
     &__logo--mobile {
       max-width: 300px;
@@ -99,10 +106,6 @@ $pink-dark: #C86C96;
   .es-banner {
     background-color: $pink-medium;
     color: #FFF;
-    font-size: 32px;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
     padding: 16px 8px;
   }
 
@@ -299,35 +302,9 @@ $pink-dark: #C86C96;
   }
 
 
-
-
   .es-cross {
     margin: 20px auto;
 
-    &__titleWraper {
-      margin: 0 auto 20px;
-      width: fit-content;
-      height: 100%;
-      padding: 0 25px;
-      line-height: 25px;
-      text-align: center;
-      background: $pink;
-      transform: skewX(-45deg);
-    }
-
-    &__title {
-      display: inline-block;
-      transform: skewX(45deg);
-      width: 100%;
-      margin: auto;
-      padding: 10px 0;
-      font-size: 18px;
-      font-weight: 700;
-      font-style: italic;
-      color: #fff;
-      text-align: center;
-      text-transform: uppercase;
-    }
 
     &__products {
       padding-top: 30px;
@@ -363,9 +340,10 @@ $pink-dark: #C86C96;
     &__text {
       @include text;
       font-size: 13px;
-      font-weight: 400;
+      font-weight: 700;
       margin-bottom: 24px;
       text-align: center;
+      height: 50px;
     }
 
     &__desc {
@@ -381,7 +359,7 @@ $pink-dark: #C86C96;
       padding: 8px 22px;
       text-decoration: none;
       color: #fff;
-      border-radius: 4px;
+      border-radius: 10px;
       font-size: 15px;
       font-weight: 500;
       text-align: center;
@@ -393,13 +371,13 @@ $pink-dark: #C86C96;
       &::before {
         content: '';
         position: absolute;
-        border-radius: 4px;
+        border-radius: 10px;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
         z-index: -1;
-        background-color: $pink-dark;
+        background-color: $pink-medium;
         transition: transform 0.3s ease-in-out;
         transform: scaleX(0);
         transform-origin: left;
@@ -504,16 +482,11 @@ $pink-dark: #C86C96;
     }
   }
 
-  // @media (min-width: 640px) {
-  //   .es-kv__text {
-  //     top: 15%;
-  //   }
-  // }
-
   @media (min-width: 760px) {
     .es-kv__text {
       top: 25%;
     }
+
     .es-kv__feature--2 {
       top: 56%;
       left: 52%;
@@ -576,6 +549,7 @@ $pink-dark: #C86C96;
     .es-kv__text {
       gap: 0.8em;
     }
+
     .es-kv__feature--2 {
       top: 60%;
       left: 55%;
@@ -601,41 +575,5 @@ $pink-dark: #C86C96;
         font-size: 18px;
       }
     }
-  }
-}
-
-@keyframes slideright {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideleft {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slidedown {
-  from {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
