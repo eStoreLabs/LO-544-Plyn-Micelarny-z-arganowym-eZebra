@@ -1,5 +1,5 @@
 $regular: 'Montserrat', sans-serif;
-$pink: #F1A9CA;
+$pink: #D1397F;
 $pink-medium: #DB7BA7;
 $pink-dark: #C86C96;
 
@@ -51,6 +51,8 @@ $pink-dark: #C86C96;
     &__logo--mobile {
       max-width: 300px;
       margin: auto;
+      position: relative;
+      z-index: 1;
     }
 
     &__text {
@@ -60,11 +62,11 @@ $pink-dark: #C86C96;
     }
 
     &__text p {
-      background-color: $pink-medium;
+      background-color: $pink;
       color: #FFF;
       text-transform: uppercase;
       text-align: center;
-      padding: 4px;
+      padding: 4px 8px;
       font-weight: 700;
       font-size: 24px;
     }
@@ -79,7 +81,7 @@ $pink-dark: #C86C96;
     }
 
     &__feature p {
-      color: $pink-medium;
+      color: $pink;
       text-transform: uppercase;
       text-align: center;
       font-weight: 700;
@@ -89,22 +91,28 @@ $pink-dark: #C86C96;
     }
 
     &__bracket--open {
-      border: 1px solid $pink-medium;
+      border: 1px solid $pink;
       border-right: none;
       height: 50px;
       width: 10px;
     }
 
     &__bracket--close {
-      border: 1px solid $pink-medium;
+      border: 1px solid $pink;
       border-left: none;
       height: 50px;
       width: 10px;
     }
+    &__disclaimer {
+      font-size: 12px;
+      text-align: center;
+      text-wrap: balance;
+    }
   }
 
+
   .es-banner {
-    background-color: $pink-medium;
+    background-color: $pink;
     color: #FFF;
     padding: 16px 8px;
   }
@@ -189,7 +197,7 @@ $pink-dark: #C86C96;
     &__textWrapper {
       height: 80px;
       padding: 8px;
-      background-color: $pink-dark;
+      background-color: $pink;
       border-radius: 14px;
       margin-top: 14px;
       display: grid;
@@ -407,18 +415,26 @@ $pink-dark: #C86C96;
   @media screen and (min-width: 576px) {
     .es-kv {
       position: relative;
+      background-color: #F4ECF2;
 
       &__logo--mobile {
         display: none;
       }
 
+      &__img {
+        position: relative;
+        z-index: 1;
+
+      }
+
       &__text {
         position: absolute;
         top: 24%;
+        width: 45%;
+        z-index: 0;
       }
 
       &__text p {
-        background-color: unset;
         font-size: clamp(16px, -0.696px + 2.8986vw, 28px);
         text-align: left;
       }
@@ -435,6 +451,16 @@ $pink-dark: #C86C96;
       &__feature--2 {
         top: 41%;
         left: 3%;
+      }
+      &__disclaimer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        font-size: 6px;
+        max-width: 21%;
+        padding: 8px;
       }
     }
 
@@ -482,19 +508,40 @@ $pink-dark: #C86C96;
     }
   }
 
-  @media (min-width: 760px) {
-    .es-kv__text {
-      top: 25%;
+  @media (min-width: 710px) {
+    .es-kv__feature {
+      top: 50%;
+      bottom: unset;
+      max-width: 155px;
+    }
+
+    .es-kv__feature--1 {
+      left: 13%;
     }
 
     .es-kv__feature--2 {
-      top: 56%;
-      left: 52%;
+      left: 56%;
     }
   }
 
-
   @media (min-width: 768px) {
+    .es-kv__feature {
+      max-width: 200px;
+    }
+
+    .es-kv__feature p {
+      font-size: 17px;
+      max-width: 165px;
+    }
+
+
+
+    .es-kv__bracket--open,
+    .es-kv__bracket--close {
+      height: 80px;
+      width: 20px;
+    }
+
     .es-features {
       &__wrapperTop {
         padding-inline: 24px;
@@ -539,27 +586,7 @@ $pink-dark: #C86C96;
     }
   }
 
-  @media (min-width: 920px) {
-    .es-kv__text {
-      gap: 0.6em;
-    }
-  }
-
-  @media (min-width: 920px) {
-    .es-kv__text {
-      gap: 0.8em;
-    }
-
-    .es-kv__feature--2 {
-      top: 60%;
-      left: 55%;
-    }
-  }
-
   @media (min-width: 992px) {
-    .es-kv__text {
-      gap: 1.1em;
-    }
 
     .es-features {
       &__action {

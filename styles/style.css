@@ -30,6 +30,8 @@
 #es-rc #es-rc-content .es-kv__logo--mobile {
   max-width: 300px;
   margin: auto;
+  position: relative;
+  z-index: 1;
 }
 #es-rc #es-rc-content .es-kv__text {
   display: flex;
@@ -37,11 +39,11 @@
   gap: 0.4em;
 }
 #es-rc #es-rc-content .es-kv__text p {
-  background-color: #DB7BA7;
+  background-color: #D1397F;
   color: #FFF;
   text-transform: uppercase;
   text-align: center;
-  padding: 4px;
+  padding: 4px 8px;
   font-weight: 700;
   font-size: 24px;
 }
@@ -54,7 +56,7 @@
   margin: auto;
 }
 #es-rc #es-rc-content .es-kv__feature p {
-  color: #DB7BA7;
+  color: #D1397F;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -63,19 +65,24 @@
   margin: auto;
 }
 #es-rc #es-rc-content .es-kv__bracket--open {
-  border: 1px solid #DB7BA7;
+  border: 1px solid #D1397F;
   border-right: none;
   height: 50px;
   width: 10px;
 }
 #es-rc #es-rc-content .es-kv__bracket--close {
-  border: 1px solid #DB7BA7;
+  border: 1px solid #D1397F;
   border-left: none;
   height: 50px;
   width: 10px;
 }
+#es-rc #es-rc-content .es-kv__disclaimer {
+  font-size: 12px;
+  text-align: center;
+  text-wrap: balance;
+}
 #es-rc #es-rc-content .es-banner {
-  background-color: #DB7BA7;
+  background-color: #D1397F;
   color: #FFF;
   padding: 16px 8px;
 }
@@ -146,7 +153,7 @@
 #es-rc #es-rc-content .es-features__textWrapper {
   height: 80px;
   padding: 8px;
-  background-color: #C86C96;
+  background-color: #D1397F;
   border-radius: 14px;
   margin-top: 14px;
   display: grid;
@@ -167,7 +174,7 @@
 #es-rc #es-rc-content .es-technology {
   text-align: center;
   text-wrap: balance;
-  background-color: #F1A9CA;
+  background-color: #D1397F;
   color: #FFF;
 }
 #es-rc #es-rc-content .es-technology__textWrapper {
@@ -197,7 +204,7 @@
   font-size: 35px;
   font-weight: 700;
   font-style: italic;
-  color: #F1A9CA;
+  color: #D1397F;
   text-align: center;
   width: 80%;
   text-transform: uppercase;
@@ -318,7 +325,7 @@
   font-weight: 500;
   text-align: center;
   transition: all 0.3s ease-in-out;
-  background: #F1A9CA;
+  background: #D1397F;
   transition: color 0.3s ease-in-out;
   z-index: 1;
 }
@@ -354,16 +361,22 @@
 @media screen and (min-width: 576px) {
   #es-rc #es-rc-content .es-kv {
     position: relative;
+    background-color: #F4ECF2;
   }
   #es-rc #es-rc-content .es-kv__logo--mobile {
     display: none;
   }
+  #es-rc #es-rc-content .es-kv__img {
+    position: relative;
+    z-index: 1;
+  }
   #es-rc #es-rc-content .es-kv__text {
     position: absolute;
     top: 24%;
+    width: 45%;
+    z-index: 0;
   }
   #es-rc #es-rc-content .es-kv__text p {
-    background-color: unset;
     font-size: clamp(16px, -0.696px + 2.8986vw, 28px);
     text-align: left;
   }
@@ -377,6 +390,16 @@
   #es-rc #es-rc-content .es-kv__feature--2 {
     top: 41%;
     left: 3%;
+  }
+  #es-rc #es-rc-content .es-kv__disclaimer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: left;
+    z-index: 2;
+    font-size: 6px;
+    max-width: 21%;
+    padding: 8px;
   }
   #es-rc #es-rc-content .es-features__wrapperTop {
     display: flex;
@@ -410,16 +433,32 @@
     justify-content: flex-end;
   }
 }
-@media (min-width: 760px) {
-  #es-rc #es-rc-content .es-kv__text {
-    top: 25%;
+@media (min-width: 710px) {
+  #es-rc #es-rc-content .es-kv__feature {
+    top: 50%;
+    bottom: unset;
+    max-width: 155px;
+  }
+  #es-rc #es-rc-content .es-kv__feature--1 {
+    left: 13%;
   }
   #es-rc #es-rc-content .es-kv__feature--2 {
-    top: 56%;
-    left: 52%;
+    left: 56%;
   }
 }
 @media (min-width: 768px) {
+  #es-rc #es-rc-content .es-kv__feature {
+    max-width: 200px;
+  }
+  #es-rc #es-rc-content .es-kv__feature p {
+    font-size: 17px;
+    max-width: 165px;
+  }
+  #es-rc #es-rc-content .es-kv__bracket--open,
+  #es-rc #es-rc-content .es-kv__bracket--close {
+    height: 80px;
+    width: 20px;
+  }
   #es-rc #es-rc-content .es-features__wrapperTop {
     padding-inline: 24px;
   }
@@ -451,24 +490,7 @@
     margin-block: 10px;
   }
 }
-@media (min-width: 920px) {
-  #es-rc #es-rc-content .es-kv__text {
-    gap: 0.6em;
-  }
-}
-@media (min-width: 920px) {
-  #es-rc #es-rc-content .es-kv__text {
-    gap: 0.8em;
-  }
-  #es-rc #es-rc-content .es-kv__feature--2 {
-    top: 60%;
-    left: 55%;
-  }
-}
 @media (min-width: 992px) {
-  #es-rc #es-rc-content .es-kv__text {
-    gap: 1.1em;
-  }
   #es-rc #es-rc-content .es-features__action {
     margin-right: 64px;
   }
