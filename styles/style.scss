@@ -1,7 +1,5 @@
 $regular: 'Montserrat', sans-serif;
 $pink: #D1397F;
-$pink-medium: #DB7BA7;
-$pink-dark: #C86C96;
 
 
 @mixin text {
@@ -53,6 +51,7 @@ $pink-dark: #C86C96;
       margin: auto;
       position: relative;
       z-index: 1;
+      margin-bottom: -6%;
     }
 
     &__text {
@@ -103,10 +102,12 @@ $pink-dark: #C86C96;
       height: 50px;
       width: 10px;
     }
+
     &__disclaimer {
       font-size: 12px;
       text-align: center;
       text-wrap: balance;
+      padding-block: 8px;
     }
   }
 
@@ -118,18 +119,9 @@ $pink-dark: #C86C96;
   }
 
   .es-features {
-    margin: 20px auto;
-
-    &__wrapperTop {
-      padding-inline: 16px;
-    }
-
-    &__imgL {
-      padding: 10px;
-    }
 
     &__action {
-      padding: 10px;
+      padding: 32px 16px;
     }
 
     &__action--wrapper {
@@ -144,6 +136,7 @@ $pink-dark: #C86C96;
       font-weight: 700;
       font-size: 32px;
       text-align: center;
+      color: $pink;
     }
 
     &__action--text {
@@ -183,7 +176,7 @@ $pink-dark: #C86C96;
 
     &__img {
       overflow: hidden;
-      border-radius: 36px;
+      border-radius: 16px;
     }
 
     &__img img {
@@ -319,7 +312,6 @@ $pink-dark: #C86C96;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      gap: 20px 2px;
       justify-content: space-between;
     }
 
@@ -385,7 +377,7 @@ $pink-dark: #C86C96;
         bottom: 0;
         right: 0;
         z-index: -1;
-        background-color: $pink-medium;
+        background-color: #902255;
         transition: transform 0.3s ease-in-out;
         transform: scaleX(0);
         transform-origin: left;
@@ -402,13 +394,20 @@ $pink-dark: #C86C96;
     text-align: center;
     font-size: 10px;
 
-    &__bg {
-      padding-top: 20px;
-    }
-
     &__logo {
       padding-top: 40px;
       width: 200px;
+    }
+
+    &__gradientBg {
+      background: rgb(18, 90, 40);
+      background: linear-gradient(90deg, rgba(18, 90, 40, 1) 0%, rgba(19, 106, 48, 1) 25%, rgba(19, 116, 52, 1) 50%, rgba(18, 110, 50, 1) 75%, rgba(18, 90, 40, 1) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-block: 32px;
+      gap: 24px;
     }
   }
 
@@ -452,6 +451,7 @@ $pink-dark: #C86C96;
         top: 41%;
         left: 3%;
       }
+
       &__disclaimer {
         position: absolute;
         bottom: 0;
@@ -468,11 +468,17 @@ $pink-dark: #C86C96;
       &__wrapperTop {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 1;
+        aspect-ratio: 976 / 454;
       }
 
       &__imgL {
-        width: 50%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
       }
 
       &__action--title {
@@ -497,7 +503,7 @@ $pink-dark: #C86C96;
         top: 50%;
         left: 2%;
         width: 75%;
-        max-width: 444px;
+        max-width: 440px;
       }
     }
 
@@ -506,6 +512,16 @@ $pink-dark: #C86C96;
         justify-content: flex-end;
       }
     }
+
+    .es-footer__img {
+      width: 27%;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .es-features__action {
+      padding: 48px 24px;
+    }
   }
 
   @media (min-width: 710px) {
@@ -513,6 +529,7 @@ $pink-dark: #C86C96;
       top: 50%;
       bottom: unset;
       max-width: 155px;
+      z-index: 2;
     }
 
     .es-kv__feature--1 {
@@ -522,6 +539,7 @@ $pink-dark: #C86C96;
     .es-kv__feature--2 {
       left: 56%;
     }
+
   }
 
   @media (min-width: 768px) {
@@ -534,8 +552,6 @@ $pink-dark: #C86C96;
       max-width: 165px;
     }
 
-
-
     .es-kv__bracket--open,
     .es-kv__bracket--close {
       height: 80px;
@@ -545,10 +561,6 @@ $pink-dark: #C86C96;
     .es-features {
       &__wrapperTop {
         padding-inline: 24px;
-      }
-
-      &__action {
-        margin-right: 32px;
       }
 
       &__action--text {
