@@ -3,7 +3,7 @@
   padding: 0;
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   max-width: 990px;
@@ -20,6 +20,9 @@
   max-width: 100%;
   display: block;
   margin: 0 auto;
+}
+#es-rc #es-rc-content sup {
+  font-size: 0.7em;
 }
 #es-rc #es-rc-content .es-section-title {
   font-size: 32px;
@@ -397,9 +400,11 @@
     right: 0;
     text-align: left;
     z-index: 2;
-    font-size: 6px;
+    font-size: 8px;
+    font-weight: 500;
     max-width: 21%;
-    padding: 8px;
+    padding: 4px 8px;
+    text-wrap: unset;
   }
   #es-rc #es-rc-content .es-features__wrapperTop {
     display: flex;
