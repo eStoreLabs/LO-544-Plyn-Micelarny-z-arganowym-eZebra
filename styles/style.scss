@@ -1,6 +1,6 @@
 $regular: 'Montserrat', sans-serif;
-$pink: #D1397F;
-
+$primary: #F6CB48CC;
+$primary-darker: #FCC362;
 
 @mixin text {
   margin: 0;
@@ -55,7 +55,11 @@ $pink: #D1397F;
       margin: auto;
       position: relative;
       z-index: 1;
-      margin-bottom: -6%;
+      margin-bottom: -8%;
+    }
+
+    img {
+      width: 100%;
     }
 
     &__text {
@@ -65,7 +69,7 @@ $pink: #D1397F;
     }
 
     &__text p {
-      background-color: $pink;
+      background-color: $primary;
       color: #FFF;
       text-transform: uppercase;
       text-align: center;
@@ -84,7 +88,7 @@ $pink: #D1397F;
     }
 
     &__feature p {
-      color: $pink;
+      color: $primary;
       text-transform: uppercase;
       text-align: center;
       font-weight: 700;
@@ -94,14 +98,14 @@ $pink: #D1397F;
     }
 
     &__bracket--open {
-      border: 1px solid $pink;
+      border: 1px solid $primary;
       border-right: none;
       height: 50px;
       width: 10px;
     }
 
     &__bracket--close {
-      border: 1px solid $pink;
+      border: 1px solid $primary;
       border-left: none;
       height: 50px;
       width: 10px;
@@ -117,53 +121,16 @@ $pink: #D1397F;
 
 
   .es-banner {
-    background-color: $pink;
+    background-color: $primary;
     color: #FFF;
     padding: 16px 8px;
+
+    .es-section-title {
+      font-size: 20px;
+    }
   }
 
   .es-features {
-
-    &__action {
-      padding: 32px 16px;
-    }
-
-    &__action--wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-      gap: 32px;
-    }
-
-    &__action--title {
-      font-weight: 700;
-      font-size: 32px;
-      text-align: center;
-      color: $pink;
-    }
-
-    &__action--text {
-      font-weight: 700;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      align-items: flex-end;
-      justify-content: space-between;
-      text-align: right;
-      font-size: 14px;
-      height: 150px;
-
-    }
-
-    &__action--gradientBar {
-      width: 25px;
-      height: 150px;
-      background: rgb(201, 62, 126);
-      background: linear-gradient(180deg, rgba(201, 62, 126, 1) 0%, rgba(241, 169, 202, 1) 44%, rgba(255, 234, 243, 1) 100%);
-      box-shadow: 7px 0px 6px 0px rgba(0, 0, 1, 0.4);
-      border-radius: 99px;
-    }
 
     &__wrapperBtm {
       margin-top: 30px;
@@ -192,9 +159,9 @@ $pink: #D1397F;
     }
 
     &__textWrapper {
-      height: 80px;
+      height: 60px;
       padding: 8px;
-      background-color: $pink;
+      background-color: $primary-darker;
       border-radius: 14px;
       margin-top: 14px;
       display: grid;
@@ -213,8 +180,9 @@ $pink: #D1397F;
   .es-technology {
     text-align: center;
     text-wrap: balance;
-    background-color: $pink;
+    background-color: $primary-darker;
     color: #FFF;
+    margin-top: 50px;
 
     &__textWrapper {
       padding: 16px;
@@ -224,7 +192,7 @@ $pink: #D1397F;
       font-weight: 700;
       font-size: 24px;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      padding-block: 16px;
     }
 
     &__text--bold {
@@ -243,7 +211,7 @@ $pink: #D1397F;
       font-size: 35px;
       font-weight: 700;
       font-style: italic;
-      color: $pink;
+      color: $primary;
       text-align: center;
       width: 80%;
       text-transform: uppercase;
@@ -368,7 +336,7 @@ $pink: #D1397F;
       font-weight: 500;
       text-align: center;
       transition: all 0.3s ease-in-out;
-      background: $pink;
+      background: $primary;
       transition: color 0.3s ease-in-out;
       z-index: 1;
 
@@ -415,7 +383,19 @@ $pink: #D1397F;
     }
   }
 
-  @media screen and (min-width: 576px) {
+  @media (min-width: 380px) {
+    .es-kv__logo--mobile {
+      margin-bottom: -5%;
+    }
+  }
+
+  @media (min-width: 550px) {
+    .es-kv__logo--mobile {
+      margin-bottom: -4%;
+    }
+  }
+
+  @media (min-width: 576px) {
     .es-kv {
       position: relative;
       background-color: #F4ECF2;
@@ -433,7 +413,7 @@ $pink: #D1397F;
       &__text {
         position: absolute;
         top: 24%;
-        width: 45%;
+        width: 50%;
         z-index: 0;
       }
 
@@ -447,13 +427,8 @@ $pink: #D1397F;
       }
 
       &__feature--1 {
-        bottom: 0;
-        left: 3%;
-      }
-
-      &__feature--2 {
-        top: 41%;
-        left: 3%;
+        bottom: 14%;
+        left: 7%;
       }
 
       &__disclaimer {
@@ -470,28 +445,11 @@ $pink: #D1397F;
       }
     }
 
+    .es-banner .es-section-title {
+      font-size: 22px;
+    }
+
     .es-features {
-      &__wrapperTop {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        position: relative;
-        z-index: 1;
-        aspect-ratio: 976 / 454;
-      }
-
-      &__imgL {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-      }
-
-      &__action--title {
-        font-size: 24px;
-        text-align: right;
-        margin-right: 24px;
-      }
 
       &__single {
         width: 30%;
@@ -524,17 +482,12 @@ $pink: #D1397F;
     }
   }
 
-  @media (min-width: 640px) {
-    .es-features__action {
-      padding: 48px 24px;
-    }
-  }
 
   @media (min-width: 710px) {
     .es-kv__feature {
       top: 50%;
       bottom: unset;
-      max-width: 155px;
+      max-width: 170px;
       z-index: 2;
     }
 
@@ -542,8 +495,10 @@ $pink: #D1397F;
       left: 13%;
     }
 
-    .es-kv__feature--2 {
-      left: 56%;
+    .es-kv__bracket--open,
+    .es-kv__bracket--close {
+      height: 80px;
+      width: 20px;
     }
 
   }
@@ -565,17 +520,6 @@ $pink: #D1397F;
     }
 
     .es-features {
-      &__wrapperTop {
-        padding-inline: 24px;
-      }
-
-      &__action--text {
-        height: 200px;
-      }
-
-      &__action--gradientBar {
-        height: 200px;
-      }
 
       &__wrapperBtm {
         padding-inline: 24px;
@@ -604,21 +548,4 @@ $pink: #D1397F;
     }
   }
 
-  @media (min-width: 992px) {
-
-    .es-features {
-      &__action {
-        margin-right: 64px;
-      }
-
-      &__action--title {
-        font-size: 30px;
-        margin-bottom: 16px;
-      }
-
-      &__action--text {
-        font-size: 18px;
-      }
-    }
-  }
 }
