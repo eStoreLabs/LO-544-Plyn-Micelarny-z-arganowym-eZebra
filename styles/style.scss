@@ -24,6 +24,11 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
   color: #000;
   background: #fff;
 
+  ::selection {
+    background-color: #D1397F;
+    color: #FFF;
+  }
+
   * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -57,6 +62,10 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
       position: relative;
       z-index: 1;
       margin-bottom: -8%;
+    }
+
+    &__img {
+      margin-bottom: 0.4em;
     }
 
     img {
@@ -120,7 +129,6 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
     }
   }
 
-
   .es-banner {
     background-color: $primary;
     color: #FFF;
@@ -140,6 +148,9 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
     &__single {
       width: 100%;
       padding: 10px;
+      display: grid;
+      grid-template-rows: max-content 1fr;
+      gap: 16px;
     }
 
     &__img {
@@ -156,11 +167,9 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
     }
 
     &__textWrapper {
-      height: 60px;
       padding: 8px;
       background-color: $primary-darker;
       border-radius: 14px;
-      margin-top: 14px;
       display: grid;
       place-items: center;
     }
@@ -182,14 +191,22 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
     margin-top: 50px;
 
     &__textWrapper {
-      padding: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__single {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     &__title {
       font-weight: 700;
       font-size: $fs-header;
       text-transform: uppercase;
-      padding-block: 16px;
     }
 
     &__text--bold {
@@ -249,6 +266,10 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
       width: 250px;
       height: 250px;
       padding: 30px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
       text-align: center;
       text-wrap: balance;
       background-color: #fff;
@@ -261,8 +282,18 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
       box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.2);
     }
 
-    &__single img {
-      max-width: 60px;
+    &__icon {
+      width: 60px;
+      height: 60px;
+      padding: 12px;
+      background-color: $primary;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+    }
+
+    &__icon img {
+      border-radius: 50%;
     }
 
     &__text--title {
@@ -271,10 +302,8 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
     }
   }
 
-
   .es-cross {
     margin: 20px auto;
-
 
     &__products {
       padding-top: 30px;
@@ -304,6 +333,10 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
     &__packshot {
       transition: transform 0.6s;
       margin-bottom: 24px;
+    }
+
+    &__img {
+      max-height: 239px;
     }
 
     &__text {
@@ -448,18 +481,27 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
         width: 30%;
         font-size: 14px;
       }
-
     }
 
     .es-technology {
       position: relative;
+      aspect-ratio: 1300 / 550;
+      height: 100%;
+
+      &__img {
+        height: 100%;
+      }
+
+      &__img img {
+        height: 100%;
+        object-fit: cover;
+      }
 
       &__textWrapper {
         position: absolute;
         transform: translate(0%, -50%);
         top: 50%;
-        left: 2%;
-        width: 75%;
+        width: 72%;
         max-width: 440px;
       }
     }
@@ -474,7 +516,6 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
       width: 27%;
     }
   }
-
 
   @media (min-width: 710px) {
     .es-kv__feature {
@@ -494,6 +535,28 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
       width: 20px;
     }
 
+    .es-technology {
+      aspect-ratio: 1300 / 420;
+    }
+
+    .es-technology__textWrapper {
+      left: 3%;
+    }
+
+    .es-formula__left {
+      width: 40%;
+      display: flex;
+      align-items: center;
+    }
+
+    .es-formula__right {
+      width: 60%;
+    }
+
+    .es-formula__single {
+      width: 45%;
+      font-size: 14px;
+    }
   }
 
   @media (min-width: 768px) {
@@ -512,32 +575,9 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
       width: 20px;
     }
 
-    .es-features {
+    .es-features__wrapperBtn {
+      padding-inline: 24px;
 
-      &__wrapperBtm {
-        padding-inline: 24px;
-      }
-    }
-
-    .es-formula {
-      &__left {
-        width: 50%;
-        display: flex;
-        align-items: center;
-      }
-
-      &__right {
-        width: 50%;
-      }
-
-      &__single {
-        width: 45%;
-        font-size: 14px;
-      }
-
-      &__text--title {
-        margin-block: 10px;
-      }
     }
   }
 
