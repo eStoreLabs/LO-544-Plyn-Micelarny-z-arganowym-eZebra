@@ -1,6 +1,7 @@
 $regular: 'Montserrat', sans-serif;
 $primary: #F6CB48CC;
 $primary-darker: #FCC362;
+$fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
 
 @mixin text {
   margin: 0;
@@ -43,7 +44,7 @@ $primary-darker: #FCC362;
   }
 
   .es-section-title {
-    font-size: 32px;
+    font-size: $fs-header;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -124,10 +125,6 @@ $primary-darker: #FCC362;
     background-color: $primary;
     color: #FFF;
     padding: 16px 8px;
-
-    .es-section-title {
-      font-size: 20px;
-    }
   }
 
   .es-features {
@@ -190,7 +187,7 @@ $primary-darker: #FCC362;
 
     &__title {
       font-weight: 700;
-      font-size: 24px;
+      font-size: $fs-header;
       text-transform: uppercase;
       padding-block: 16px;
     }
@@ -398,7 +395,7 @@ $primary-darker: #FCC362;
   @media (min-width: 576px) {
     .es-kv {
       position: relative;
-      background-color: #F4ECF2;
+      background-color: #EDEEEF;
 
       &__logo--mobile {
         display: none;
@@ -418,8 +415,8 @@ $primary-darker: #FCC362;
       }
 
       &__text p {
-        font-size: clamp(16px, -0.696px + 2.8986vw, 28px);
-        text-align: left;
+        font-size: $fs-header;
+        padding-right: 1em;
       }
 
       &__feature {
@@ -443,10 +440,6 @@ $primary-darker: #FCC362;
         padding: 4px 8px;
         text-wrap: unset;
       }
-    }
-
-    .es-banner .es-section-title {
-      font-size: 22px;
     }
 
     .es-features {

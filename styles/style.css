@@ -25,7 +25,7 @@
   font-size: 0.7em;
 }
 #es-rc #es-rc-content .es-section-title {
-  font-size: 32px;
+  font-size: clamp(16px, -0.696px + 2.8986vw, 28px);
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
@@ -94,9 +94,6 @@
   color: #FFF;
   padding: 16px 8px;
 }
-#es-rc #es-rc-content .es-banner .es-section-title {
-  font-size: 20px;
-}
 #es-rc #es-rc-content .es-features__wrapperBtm {
   margin-top: 30px;
   padding-inline: 16px;
@@ -151,7 +148,7 @@
 }
 #es-rc #es-rc-content .es-technology__title {
   font-weight: 700;
-  font-size: 24px;
+  font-size: clamp(16px, -0.696px + 2.8986vw, 28px);
   text-transform: uppercase;
   padding-block: 16px;
 }
@@ -346,7 +343,7 @@
 @media (min-width: 576px) {
   #es-rc #es-rc-content .es-kv {
     position: relative;
-    background-color: #F4ECF2;
+    background-color: #EDEEEF;
   }
   #es-rc #es-rc-content .es-kv__logo--mobile {
     display: none;
@@ -363,7 +360,7 @@
   }
   #es-rc #es-rc-content .es-kv__text p {
     font-size: clamp(16px, -0.696px + 2.8986vw, 28px);
-    text-align: left;
+    padding-right: 1em;
   }
   #es-rc #es-rc-content .es-kv__feature {
     position: absolute;
@@ -383,9 +380,6 @@
     max-width: 21%;
     padding: 4px 8px;
     text-wrap: unset;
-  }
-  #es-rc #es-rc-content .es-banner .es-section-title {
-    font-size: 22px;
   }
   #es-rc #es-rc-content .es-features__single {
     width: 30%;
