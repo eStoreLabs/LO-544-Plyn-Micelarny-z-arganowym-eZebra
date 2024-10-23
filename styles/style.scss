@@ -269,6 +269,10 @@ $primary-darker: #FCC362;
       width: 250px;
       height: 250px;
       padding: 30px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
       text-align: center;
       text-wrap: balance;
       background-color: #fff;
@@ -281,8 +285,18 @@ $primary-darker: #FCC362;
       box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.2);
     }
 
-    &__single img {
-      max-width: 60px;
+    &__icon {
+      width: 60px;
+      height: 60px;
+      padding: 12px;
+      background-color: $primary;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+    }
+
+    &__icon img {
+      border-radius: 50%;
     }
 
     &__text--title {
@@ -291,10 +305,8 @@ $primary-darker: #FCC362;
     }
   }
 
-
   .es-cross {
     margin: 20px auto;
-
 
     &__products {
       padding-top: 30px;
@@ -324,6 +336,10 @@ $primary-darker: #FCC362;
     &__packshot {
       transition: transform 0.6s;
       margin-bottom: 24px;
+    }
+
+    &__img {
+      max-height: 239px;
     }
 
     &__text {
@@ -508,7 +524,6 @@ $primary-darker: #FCC362;
     }
   }
 
-
   @media (min-width: 710px) {
     .es-kv__feature {
       top: 50%;
@@ -534,6 +549,21 @@ $primary-darker: #FCC362;
     .es-technology__textWrapper {
       left: 3%;
     }
+
+    .es-formula__left {
+      width: 40%;
+      display: flex;
+      align-items: center;
+    }
+
+    .es-formula__right {
+      width: 60%;
+    }
+
+    .es-formula__single {
+      width: 45%;
+      font-size: 14px;
+    }
   }
 
   @media (min-width: 768px) {
@@ -552,32 +582,9 @@ $primary-darker: #FCC362;
       width: 20px;
     }
 
-    .es-features {
+    .es-features__wrapperBtn {
+      padding-inline: 24px;
 
-      &__wrapperBtm {
-        padding-inline: 24px;
-      }
-    }
-
-    .es-formula {
-      &__left {
-        width: 50%;
-        display: flex;
-        align-items: center;
-      }
-
-      &__right {
-        width: 50%;
-      }
-
-      &__single {
-        width: 45%;
-        font-size: 14px;
-      }
-
-      &__text--title {
-        margin-block: 10px;
-      }
     }
   }
 
