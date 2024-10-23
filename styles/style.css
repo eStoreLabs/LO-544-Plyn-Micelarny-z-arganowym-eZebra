@@ -10,6 +10,14 @@
   color: #000;
   background: #fff;
 }
+#es-rc #es-rc-content ::-moz-selection {
+  background-color: #D1397F;
+  color: #FFF;
+}
+#es-rc #es-rc-content ::selection {
+  background-color: #D1397F;
+  color: #FFF;
+}
 #es-rc #es-rc-content * {
   box-sizing: border-box;
 }
@@ -36,6 +44,9 @@
   position: relative;
   z-index: 1;
   margin-bottom: -8%;
+}
+#es-rc #es-rc-content .es-kv__img {
+  margin-bottom: 0.4em;
 }
 #es-rc #es-rc-content .es-kv img {
   width: 100%;
@@ -107,6 +118,9 @@
 #es-rc #es-rc-content .es-features__single {
   width: 100%;
   padding: 10px;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  gap: 16px;
 }
 #es-rc #es-rc-content .es-features__img {
   overflow: hidden;
@@ -119,11 +133,9 @@
   scale: 1.05;
 }
 #es-rc #es-rc-content .es-features__textWrapper {
-  height: 60px;
   padding: 8px;
   background-color: #FCC362;
   border-radius: 14px;
-  margin-top: 14px;
   display: grid;
   place-items: center;
 }
@@ -147,13 +159,20 @@
   margin-top: 50px;
 }
 #es-rc #es-rc-content .es-technology__textWrapper {
-  padding: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#es-rc #es-rc-content .es-technology__single {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 #es-rc #es-rc-content .es-technology__title {
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
-  padding-block: 16px;
 }
 #es-rc #es-rc-content .es-technology__text--bold {
   font-weight: 700;
@@ -208,6 +227,10 @@
   width: 250px;
   height: 250px;
   padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   text-align: center;
   text-wrap: balance;
   background-color: #fff;
@@ -218,8 +241,17 @@
 #es-rc #es-rc-content .es-formula__single:hover {
   box-shadow: 1px 1px 15px 3px rgba(0, 0, 1, 0.2);
 }
-#es-rc #es-rc-content .es-formula__single img {
-  max-width: 60px;
+#es-rc #es-rc-content .es-formula__icon {
+  width: 60px;
+  height: 60px;
+  padding: 12px;
+  background-color: rgba(246, 203, 72, 0.8);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+#es-rc #es-rc-content .es-formula__icon img {
+  border-radius: 50%;
 }
 #es-rc #es-rc-content .es-formula__text--title {
   font-weight: 700;
@@ -252,6 +284,9 @@
 #es-rc #es-rc-content .es-cross__packshot {
   transition: transform 0.6s;
   margin-bottom: 24px;
+}
+#es-rc #es-rc-content .es-cross__img {
+  max-height: 239px;
 }
 #es-rc #es-rc-content .es-cross__text {
   margin: 0;
@@ -393,13 +428,22 @@
   }
   #es-rc #es-rc-content .es-technology {
     position: relative;
+    aspect-ratio: 1300/550;
+    height: 100%;
+  }
+  #es-rc #es-rc-content .es-technology__img {
+    height: 100%;
+  }
+  #es-rc #es-rc-content .es-technology__img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #es-rc #es-rc-content .es-technology__textWrapper {
     position: absolute;
     transform: translate(0%, -50%);
     top: 50%;
-    left: 2%;
-    width: 75%;
+    width: 72%;
     max-width: 440px;
   }
   #es-rc #es-rc-content .es-cross__product {
@@ -424,6 +468,24 @@
     height: 80px;
     width: 20px;
   }
+  #es-rc #es-rc-content .es-technology {
+    aspect-ratio: 1300/420;
+  }
+  #es-rc #es-rc-content .es-technology__textWrapper {
+    left: 3%;
+  }
+  #es-rc #es-rc-content .es-formula__left {
+    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+  #es-rc #es-rc-content .es-formula__right {
+    width: 60%;
+  }
+  #es-rc #es-rc-content .es-formula__single {
+    width: 45%;
+    font-size: 14px;
+  }
 }
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-kv__feature {
@@ -438,22 +500,7 @@
     height: 80px;
     width: 20px;
   }
-  #es-rc #es-rc-content .es-features__wrapperBtm {
+  #es-rc #es-rc-content .es-features__wrapperBtn {
     padding-inline: 24px;
-  }
-  #es-rc #es-rc-content .es-formula__left {
-    width: 50%;
-    display: flex;
-    align-items: center;
-  }
-  #es-rc #es-rc-content .es-formula__right {
-    width: 50%;
-  }
-  #es-rc #es-rc-content .es-formula__single {
-    width: 45%;
-    font-size: 14px;
-  }
-  #es-rc #es-rc-content .es-formula__text--title {
-    margin-block: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
