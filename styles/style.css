@@ -11,11 +11,11 @@
   background: #fff;
 }
 #es-rc #es-rc-content ::-moz-selection {
-  background-color: #D1397F;
+  background-color: #d79729;
   color: #FFF;
 }
 #es-rc #es-rc-content ::selection {
-  background-color: #D1397F;
+  background-color: #d79729;
   color: #FFF;
 }
 #es-rc #es-rc-content * {
@@ -338,7 +338,7 @@
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-color: #902255;
+  background-color: #d79729;
   transition: transform 0.3s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -439,6 +439,7 @@
     top: 50%;
     width: 72%;
     max-width: 440px;
+    gap: 32px;
   }
   #es-rc #es-rc-content .es-cross__product {
     justify-content: flex-end;

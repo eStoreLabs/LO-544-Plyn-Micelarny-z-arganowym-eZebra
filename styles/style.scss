@@ -1,6 +1,7 @@
 $regular: 'Montserrat', sans-serif;
 $primary: #F6CB48CC;
 $primary-darker: #FCC362;
+$accent: #d79729;
 $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
 
 @mixin text {
@@ -25,7 +26,7 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
   background: #fff;
 
   ::selection {
-    background-color: #D1397F;
+    background-color: $accent;
     color: #FFF;
   }
 
@@ -379,7 +380,7 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
         bottom: 0;
         right: 0;
         z-index: -1;
-        background-color: #902255;
+        background-color: $accent;
         transition: transform 0.3s ease-in-out;
         transform: scaleX(0);
         transform-origin: left;
@@ -503,6 +504,7 @@ $fs-header: clamp(16px, -0.696px + 2.8986vw, 28px);
         top: 50%;
         width: 72%;
         max-width: 440px;
+        gap: 32px;
       }
     }
 
