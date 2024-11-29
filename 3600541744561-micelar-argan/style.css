@@ -430,7 +430,7 @@
 
   #es-rc #es-rc-content .es-kv {
     position: relative;
-    background-color: #F4ECF2;
+    background-color: #EDEEEF;
   }
 
   #es-rc #es-rc-content .es-kv__logo--mobile {
@@ -445,7 +445,7 @@
   #es-rc #es-rc-content .es-kv__text {
     position: absolute;
     top: 24%;
-    width: 45%;
+    width: 50%;
     z-index: 0;
   }
 
